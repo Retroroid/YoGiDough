@@ -23,25 +23,25 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Normal"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Effect"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Ritual"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Fusion"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Tuner"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Synchro"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Link"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Xyz"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Spirit"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Gemini"}, -1, System.Drawing.Color.Empty, System.Drawing.Color.Empty, new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -60,29 +60,37 @@
             this.soCardType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.soMonster = new System.Windows.Forms.GroupBox();
-            this.msoTypeBox = new System.Windows.Forms.ComboBox();
-            this.msoLabelType = new System.Windows.Forms.Label();
-            this.msoSubType = new System.Windows.Forms.ListView();
-            this.msoBoxAtk = new System.Windows.Forms.TextBox();
-            this.msoLabelLevelRankLink = new System.Windows.Forms.Label();
-            this.msoAtkLess = new System.Windows.Forms.CheckBox();
-            this.msoAtkEqual = new System.Windows.Forms.CheckBox();
-            this.msoAtkGreat = new System.Windows.Forms.CheckBox();
-            this.msoLabelAtk = new System.Windows.Forms.Label();
-            this.msoBoxDef = new System.Windows.Forms.TextBox();
-            this.msoDefLess = new System.Windows.Forms.CheckBox();
-            this.msoDefGreat = new System.Windows.Forms.CheckBox();
-            this.msoDefEqual = new System.Windows.Forms.CheckBox();
-            this.msoLabelDef = new System.Windows.Forms.Label();
-            this.msoBoxLevelRankLink = new System.Windows.Forms.TextBox();
-            this.msoLRLLess = new System.Windows.Forms.CheckBox();
-            this.msoLRLGreat = new System.Windows.Forms.CheckBox();
-            this.msoLRLEqual = new System.Windows.Forms.CheckBox();
             this.msoBoxScale = new System.Windows.Forms.TextBox();
             this.msoScaleLess = new System.Windows.Forms.CheckBox();
             this.msoScaleGreat = new System.Windows.Forms.CheckBox();
             this.msoScaleEqual = new System.Windows.Forms.CheckBox();
             this.msoLabelScale = new System.Windows.Forms.Label();
+            this.msoBoxLevelRankLink = new System.Windows.Forms.TextBox();
+            this.msoLRLGreat = new System.Windows.Forms.CheckBox();
+            this.msoLRLEqual = new System.Windows.Forms.CheckBox();
+            this.msoLabelDef = new System.Windows.Forms.Label();
+            this.msoLabelAtk = new System.Windows.Forms.Label();
+            this.msoBoxDef = new System.Windows.Forms.TextBox();
+            this.msoDefLess = new System.Windows.Forms.CheckBox();
+            this.msoDefGreat = new System.Windows.Forms.CheckBox();
+            this.msoDefEqual = new System.Windows.Forms.CheckBox();
+            this.msoLabelLevelRankLink = new System.Windows.Forms.Label();
+            this.msoBoxAtk = new System.Windows.Forms.TextBox();
+            this.msoSubType = new System.Windows.Forms.ListView();
+            this.msoLabelType = new System.Windows.Forms.Label();
+            this.msoTypeBox = new System.Windows.Forms.ComboBox();
+            this.msoAttAny = new System.Windows.Forms.RadioButton();
+            this.msoAttLight = new System.Windows.Forms.RadioButton();
+            this.msoAttFire = new System.Windows.Forms.RadioButton();
+            this.msoAttWind = new System.Windows.Forms.RadioButton();
+            this.msoAttDivine = new System.Windows.Forms.RadioButton();
+            this.msoAttDark = new System.Windows.Forms.RadioButton();
+            this.msoAttWater = new System.Windows.Forms.RadioButton();
+            this.msoAttEarth = new System.Windows.Forms.RadioButton();
+            this.msoAtkLess = new System.Windows.Forms.CheckBox();
+            this.msoAtkGreat = new System.Windows.Forms.CheckBox();
+            this.msoAtkEqual = new System.Windows.Forms.CheckBox();
+            this.msoLRLLess = new System.Windows.Forms.CheckBox();
             this.soSpellTrap = new System.Windows.Forms.GroupBox();
             this.stsoRadioIcon = new System.Windows.Forms.GroupBox();
             this.stsoIconAny = new System.Windows.Forms.RadioButton();
@@ -96,14 +104,6 @@
             this.stsoTypeTrap = new System.Windows.Forms.RadioButton();
             this.stsoTypeSpell = new System.Windows.Forms.RadioButton();
             this.stsoTypeAny = new System.Windows.Forms.RadioButton();
-            this.msoAttAny = new System.Windows.Forms.RadioButton();
-            this.msoAttLight = new System.Windows.Forms.RadioButton();
-            this.msoAttFire = new System.Windows.Forms.RadioButton();
-            this.msoAttWind = new System.Windows.Forms.RadioButton();
-            this.msoAttDivine = new System.Windows.Forms.RadioButton();
-            this.msoAttDark = new System.Windows.Forms.RadioButton();
-            this.msoAttWater = new System.Windows.Forms.RadioButton();
-            this.msoAttEarth = new System.Windows.Forms.RadioButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -111,12 +111,24 @@
             this.button2 = new System.Windows.Forms.Button();
             this.soResultCount = new System.Windows.Forms.Label();
             this.labelCardName = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.deckBox = new System.Windows.Forms.ListBox();
+            this.textSave = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.textLoad = new System.Windows.Forms.TextBox();
+            this.buttonAddToDeck = new System.Windows.Forms.Button();
+            this.buttonRemoveFromDeck = new System.Windows.Forms.Button();
+            this.allDecks = new System.Windows.Forms.ListBox();
+            this.buttonDeleteDeck = new System.Windows.Forms.Button();
+            this.buttonClearDeck = new System.Windows.Forms.Button();
             this.soMonster.SuspendLayout();
             this.soSpellTrap.SuspendLayout();
             this.stsoRadioIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -163,7 +175,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(752, 624);
+            this.textBox4.Location = new System.Drawing.Point(752, 633);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
@@ -323,222 +335,6 @@
             this.soMonster.TabIndex = 19;
             this.soMonster.TabStop = false;
             this.soMonster.Text = "Monster Search Options";
-            this.soMonster.Enter += new System.EventHandler(this.SoMonster_Enter);
-            // 
-            // msoTypeBox
-            // 
-            this.msoTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoTypeBox.FormattingEnabled = true;
-            this.msoTypeBox.Location = new System.Drawing.Point(6, 53);
-            this.msoTypeBox.Name = "msoTypeBox";
-            this.msoTypeBox.Size = new System.Drawing.Size(121, 24);
-            this.msoTypeBox.TabIndex = 8;
-            this.msoTypeBox.Text = "Any";
-            // 
-            // msoLabelType
-            // 
-            this.msoLabelType.AutoSize = true;
-            this.msoLabelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLabelType.Location = new System.Drawing.Point(6, 30);
-            this.msoLabelType.Name = "msoLabelType";
-            this.msoLabelType.Size = new System.Drawing.Size(43, 20);
-            this.msoLabelType.TabIndex = 9;
-            this.msoLabelType.Text = "Type";
-            // 
-            // msoSubType
-            // 
-            this.msoSubType.BackColor = System.Drawing.SystemColors.Menu;
-            this.msoSubType.CheckBoxes = true;
-            this.msoSubType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            listViewItem11.StateImageIndex = 0;
-            listViewItem12.StateImageIndex = 0;
-            listViewItem13.StateImageIndex = 0;
-            listViewItem14.StateImageIndex = 0;
-            listViewItem15.StateImageIndex = 0;
-            listViewItem16.StateImageIndex = 0;
-            listViewItem17.StateImageIndex = 0;
-            listViewItem18.StateImageIndex = 0;
-            listViewItem19.StateImageIndex = 0;
-            listViewItem20.StateImageIndex = 0;
-            this.msoSubType.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem11,
-            listViewItem12,
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20});
-            this.msoSubType.Location = new System.Drawing.Point(150, 19);
-            this.msoSubType.Name = "msoSubType";
-            this.msoSubType.Size = new System.Drawing.Size(294, 92);
-            this.msoSubType.TabIndex = 11;
-            this.msoSubType.UseCompatibleStateImageBehavior = false;
-            this.msoSubType.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // msoBoxAtk
-            // 
-            this.msoBoxAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoBoxAtk.Location = new System.Drawing.Point(178, 241);
-            this.msoBoxAtk.Name = "msoBoxAtk";
-            this.msoBoxAtk.Size = new System.Drawing.Size(98, 31);
-            this.msoBoxAtk.TabIndex = 12;
-            // 
-            // msoLabelLevelRankLink
-            // 
-            this.msoLabelLevelRankLink.AutoSize = true;
-            this.msoLabelLevelRankLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLabelLevelRankLink.Location = new System.Drawing.Point(146, 130);
-            this.msoLabelLevelRankLink.Name = "msoLabelLevelRankLink";
-            this.msoLabelLevelRankLink.Size = new System.Drawing.Size(146, 20);
-            this.msoLabelLevelRankLink.TabIndex = 13;
-            this.msoLabelLevelRankLink.Text = "Level / Rank / Link -";
-            // 
-            // msoAtkLess
-            // 
-            this.msoAtkLess.AutoSize = true;
-            this.msoAtkLess.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoAtkLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoAtkLess.Location = new System.Drawing.Point(180, 268);
-            this.msoAtkLess.Name = "msoAtkLess";
-            this.msoAtkLess.Size = new System.Drawing.Size(25, 42);
-            this.msoAtkLess.TabIndex = 14;
-            this.msoAtkLess.Text = "<";
-            this.msoAtkLess.UseVisualStyleBackColor = true;
-            // 
-            // msoAtkEqual
-            // 
-            this.msoAtkEqual.AutoSize = true;
-            this.msoAtkEqual.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoAtkEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoAtkEqual.Location = new System.Drawing.Point(215, 268);
-            this.msoAtkEqual.Name = "msoAtkEqual";
-            this.msoAtkEqual.Size = new System.Drawing.Size(25, 42);
-            this.msoAtkEqual.TabIndex = 15;
-            this.msoAtkEqual.Text = "=";
-            this.msoAtkEqual.UseVisualStyleBackColor = true;
-            // 
-            // msoAtkGreat
-            // 
-            this.msoAtkGreat.AutoSize = true;
-            this.msoAtkGreat.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoAtkGreat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoAtkGreat.Location = new System.Drawing.Point(250, 268);
-            this.msoAtkGreat.Name = "msoAtkGreat";
-            this.msoAtkGreat.Size = new System.Drawing.Size(25, 42);
-            this.msoAtkGreat.TabIndex = 16;
-            this.msoAtkGreat.Text = ">";
-            this.msoAtkGreat.UseVisualStyleBackColor = true;
-            // 
-            // msoLabelAtk
-            // 
-            this.msoLabelAtk.AutoSize = true;
-            this.msoLabelAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLabelAtk.Location = new System.Drawing.Point(176, 221);
-            this.msoLabelAtk.Name = "msoLabelAtk";
-            this.msoLabelAtk.Size = new System.Drawing.Size(39, 20);
-            this.msoLabelAtk.TabIndex = 18;
-            this.msoLabelAtk.Text = "ATK";
-            // 
-            // msoBoxDef
-            // 
-            this.msoBoxDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoBoxDef.Location = new System.Drawing.Point(298, 241);
-            this.msoBoxDef.Name = "msoBoxDef";
-            this.msoBoxDef.Size = new System.Drawing.Size(98, 31);
-            this.msoBoxDef.TabIndex = 17;
-            // 
-            // msoDefLess
-            // 
-            this.msoDefLess.AutoSize = true;
-            this.msoDefLess.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoDefLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoDefLess.Location = new System.Drawing.Point(300, 268);
-            this.msoDefLess.Name = "msoDefLess";
-            this.msoDefLess.Size = new System.Drawing.Size(25, 42);
-            this.msoDefLess.TabIndex = 19;
-            this.msoDefLess.Text = "<";
-            this.msoDefLess.UseVisualStyleBackColor = true;
-            // 
-            // msoDefGreat
-            // 
-            this.msoDefGreat.AutoSize = true;
-            this.msoDefGreat.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoDefGreat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoDefGreat.Location = new System.Drawing.Point(370, 268);
-            this.msoDefGreat.Name = "msoDefGreat";
-            this.msoDefGreat.Size = new System.Drawing.Size(25, 42);
-            this.msoDefGreat.TabIndex = 21;
-            this.msoDefGreat.Text = ">";
-            this.msoDefGreat.UseVisualStyleBackColor = true;
-            // 
-            // msoDefEqual
-            // 
-            this.msoDefEqual.AutoSize = true;
-            this.msoDefEqual.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoDefEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoDefEqual.Location = new System.Drawing.Point(335, 268);
-            this.msoDefEqual.Name = "msoDefEqual";
-            this.msoDefEqual.Size = new System.Drawing.Size(25, 42);
-            this.msoDefEqual.TabIndex = 20;
-            this.msoDefEqual.Text = "=";
-            this.msoDefEqual.UseVisualStyleBackColor = true;
-            // 
-            // msoLabelDef
-            // 
-            this.msoLabelDef.AutoSize = true;
-            this.msoLabelDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLabelDef.Location = new System.Drawing.Point(296, 221);
-            this.msoLabelDef.Name = "msoLabelDef";
-            this.msoLabelDef.Size = new System.Drawing.Size(42, 20);
-            this.msoLabelDef.TabIndex = 22;
-            this.msoLabelDef.Text = "DEF";
-            // 
-            // msoBoxLevelRankLink
-            // 
-            this.msoBoxLevelRankLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoBoxLevelRankLink.Location = new System.Drawing.Point(298, 123);
-            this.msoBoxLevelRankLink.Name = "msoBoxLevelRankLink";
-            this.msoBoxLevelRankLink.Size = new System.Drawing.Size(45, 31);
-            this.msoBoxLevelRankLink.TabIndex = 23;
-            // 
-            // msoLRLLess
-            // 
-            this.msoLRLLess.AutoSize = true;
-            this.msoLRLLess.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoLRLLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLRLLess.Location = new System.Drawing.Point(349, 117);
-            this.msoLRLLess.Name = "msoLRLLess";
-            this.msoLRLLess.Size = new System.Drawing.Size(25, 42);
-            this.msoLRLLess.TabIndex = 24;
-            this.msoLRLLess.Text = "<";
-            this.msoLRLLess.UseVisualStyleBackColor = true;
-            // 
-            // msoLRLGreat
-            // 
-            this.msoLRLGreat.AutoSize = true;
-            this.msoLRLGreat.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoLRLGreat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLRLGreat.Location = new System.Drawing.Point(399, 117);
-            this.msoLRLGreat.Name = "msoLRLGreat";
-            this.msoLRLGreat.Size = new System.Drawing.Size(25, 42);
-            this.msoLRLGreat.TabIndex = 26;
-            this.msoLRLGreat.Text = ">";
-            this.msoLRLGreat.UseVisualStyleBackColor = true;
-            // 
-            // msoLRLEqual
-            // 
-            this.msoLRLEqual.AutoSize = true;
-            this.msoLRLEqual.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.msoLRLEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msoLRLEqual.Location = new System.Drawing.Point(374, 117);
-            this.msoLRLEqual.Name = "msoLRLEqual";
-            this.msoLRLEqual.Size = new System.Drawing.Size(25, 42);
-            this.msoLRLEqual.TabIndex = 25;
-            this.msoLRLEqual.Text = "=";
-            this.msoLRLEqual.UseVisualStyleBackColor = true;
             // 
             // msoBoxScale
             // 
@@ -594,6 +390,299 @@
             this.msoLabelScale.TabIndex = 27;
             this.msoLabelScale.Text = "Scale";
             // 
+            // msoBoxLevelRankLink
+            // 
+            this.msoBoxLevelRankLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoBoxLevelRankLink.Location = new System.Drawing.Point(298, 123);
+            this.msoBoxLevelRankLink.Name = "msoBoxLevelRankLink";
+            this.msoBoxLevelRankLink.Size = new System.Drawing.Size(45, 31);
+            this.msoBoxLevelRankLink.TabIndex = 23;
+            // 
+            // msoLRLGreat
+            // 
+            this.msoLRLGreat.AutoSize = true;
+            this.msoLRLGreat.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoLRLGreat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLRLGreat.Location = new System.Drawing.Point(399, 117);
+            this.msoLRLGreat.Name = "msoLRLGreat";
+            this.msoLRLGreat.Size = new System.Drawing.Size(25, 42);
+            this.msoLRLGreat.TabIndex = 26;
+            this.msoLRLGreat.Text = ">";
+            this.msoLRLGreat.UseVisualStyleBackColor = true;
+            // 
+            // msoLRLEqual
+            // 
+            this.msoLRLEqual.AutoSize = true;
+            this.msoLRLEqual.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoLRLEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLRLEqual.Location = new System.Drawing.Point(374, 117);
+            this.msoLRLEqual.Name = "msoLRLEqual";
+            this.msoLRLEqual.Size = new System.Drawing.Size(25, 42);
+            this.msoLRLEqual.TabIndex = 25;
+            this.msoLRLEqual.Text = "=";
+            this.msoLRLEqual.UseVisualStyleBackColor = true;
+            // 
+            // msoLabelDef
+            // 
+            this.msoLabelDef.AutoSize = true;
+            this.msoLabelDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLabelDef.Location = new System.Drawing.Point(296, 221);
+            this.msoLabelDef.Name = "msoLabelDef";
+            this.msoLabelDef.Size = new System.Drawing.Size(42, 20);
+            this.msoLabelDef.TabIndex = 22;
+            this.msoLabelDef.Text = "DEF";
+            // 
+            // msoLabelAtk
+            // 
+            this.msoLabelAtk.AutoSize = true;
+            this.msoLabelAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLabelAtk.Location = new System.Drawing.Point(176, 221);
+            this.msoLabelAtk.Name = "msoLabelAtk";
+            this.msoLabelAtk.Size = new System.Drawing.Size(39, 20);
+            this.msoLabelAtk.TabIndex = 18;
+            this.msoLabelAtk.Text = "ATK";
+            // 
+            // msoBoxDef
+            // 
+            this.msoBoxDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoBoxDef.Location = new System.Drawing.Point(298, 241);
+            this.msoBoxDef.Name = "msoBoxDef";
+            this.msoBoxDef.Size = new System.Drawing.Size(98, 31);
+            this.msoBoxDef.TabIndex = 17;
+            // 
+            // msoDefLess
+            // 
+            this.msoDefLess.AutoSize = true;
+            this.msoDefLess.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoDefLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoDefLess.Location = new System.Drawing.Point(300, 268);
+            this.msoDefLess.Name = "msoDefLess";
+            this.msoDefLess.Size = new System.Drawing.Size(25, 42);
+            this.msoDefLess.TabIndex = 19;
+            this.msoDefLess.Text = "<";
+            this.msoDefLess.UseVisualStyleBackColor = true;
+            // 
+            // msoDefGreat
+            // 
+            this.msoDefGreat.AutoSize = true;
+            this.msoDefGreat.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoDefGreat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoDefGreat.Location = new System.Drawing.Point(370, 268);
+            this.msoDefGreat.Name = "msoDefGreat";
+            this.msoDefGreat.Size = new System.Drawing.Size(25, 42);
+            this.msoDefGreat.TabIndex = 21;
+            this.msoDefGreat.Text = ">";
+            this.msoDefGreat.UseVisualStyleBackColor = true;
+            // 
+            // msoDefEqual
+            // 
+            this.msoDefEqual.AutoSize = true;
+            this.msoDefEqual.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoDefEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoDefEqual.Location = new System.Drawing.Point(335, 268);
+            this.msoDefEqual.Name = "msoDefEqual";
+            this.msoDefEqual.Size = new System.Drawing.Size(25, 42);
+            this.msoDefEqual.TabIndex = 20;
+            this.msoDefEqual.Text = "=";
+            this.msoDefEqual.UseVisualStyleBackColor = true;
+            // 
+            // msoLabelLevelRankLink
+            // 
+            this.msoLabelLevelRankLink.AutoSize = true;
+            this.msoLabelLevelRankLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLabelLevelRankLink.Location = new System.Drawing.Point(146, 130);
+            this.msoLabelLevelRankLink.Name = "msoLabelLevelRankLink";
+            this.msoLabelLevelRankLink.Size = new System.Drawing.Size(146, 20);
+            this.msoLabelLevelRankLink.TabIndex = 13;
+            this.msoLabelLevelRankLink.Text = "Level / Rank / Link -";
+            // 
+            // msoBoxAtk
+            // 
+            this.msoBoxAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoBoxAtk.Location = new System.Drawing.Point(178, 241);
+            this.msoBoxAtk.Name = "msoBoxAtk";
+            this.msoBoxAtk.Size = new System.Drawing.Size(98, 31);
+            this.msoBoxAtk.TabIndex = 12;
+            // 
+            // msoSubType
+            // 
+            this.msoSubType.BackColor = System.Drawing.SystemColors.Menu;
+            this.msoSubType.CheckBoxes = true;
+            this.msoSubType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.StateImageIndex = 0;
+            listViewItem8.StateImageIndex = 0;
+            listViewItem9.StateImageIndex = 0;
+            listViewItem10.StateImageIndex = 0;
+            this.msoSubType.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10});
+            this.msoSubType.Location = new System.Drawing.Point(150, 19);
+            this.msoSubType.Name = "msoSubType";
+            this.msoSubType.Size = new System.Drawing.Size(294, 92);
+            this.msoSubType.TabIndex = 11;
+            this.msoSubType.UseCompatibleStateImageBehavior = false;
+            this.msoSubType.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // msoLabelType
+            // 
+            this.msoLabelType.AutoSize = true;
+            this.msoLabelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLabelType.Location = new System.Drawing.Point(6, 30);
+            this.msoLabelType.Name = "msoLabelType";
+            this.msoLabelType.Size = new System.Drawing.Size(43, 20);
+            this.msoLabelType.TabIndex = 9;
+            this.msoLabelType.Text = "Type";
+            // 
+            // msoTypeBox
+            // 
+            this.msoTypeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoTypeBox.FormattingEnabled = true;
+            this.msoTypeBox.Location = new System.Drawing.Point(6, 53);
+            this.msoTypeBox.Name = "msoTypeBox";
+            this.msoTypeBox.Size = new System.Drawing.Size(121, 24);
+            this.msoTypeBox.TabIndex = 8;
+            this.msoTypeBox.Text = "Any";
+            // 
+            // msoAttAny
+            // 
+            this.msoAttAny.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.msoAttAny.Checked = true;
+            this.msoAttAny.Location = new System.Drawing.Point(64, 241);
+            this.msoAttAny.Name = "msoAttAny";
+            this.msoAttAny.Size = new System.Drawing.Size(57, 46);
+            this.msoAttAny.TabIndex = 7;
+            this.msoAttAny.TabStop = true;
+            this.msoAttAny.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttAny.UseVisualStyleBackColor = true;
+            // 
+            // msoAttLight
+            // 
+            this.msoAttLight.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.msoAttLight.Location = new System.Drawing.Point(64, 201);
+            this.msoAttLight.Name = "msoAttLight";
+            this.msoAttLight.Size = new System.Drawing.Size(57, 46);
+            this.msoAttLight.TabIndex = 6;
+            this.msoAttLight.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttLight.UseVisualStyleBackColor = true;
+            // 
+            // msoAttFire
+            // 
+            this.msoAttFire.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.msoAttFire.Location = new System.Drawing.Point(64, 161);
+            this.msoAttFire.Name = "msoAttFire";
+            this.msoAttFire.Size = new System.Drawing.Size(57, 46);
+            this.msoAttFire.TabIndex = 5;
+            this.msoAttFire.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttFire.UseVisualStyleBackColor = true;
+            // 
+            // msoAttWind
+            // 
+            this.msoAttWind.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.msoAttWind.Location = new System.Drawing.Point(64, 118);
+            this.msoAttWind.Name = "msoAttWind";
+            this.msoAttWind.Size = new System.Drawing.Size(57, 46);
+            this.msoAttWind.TabIndex = 4;
+            this.msoAttWind.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttWind.UseVisualStyleBackColor = true;
+            // 
+            // msoAttDivine
+            // 
+            this.msoAttDivine.Location = new System.Drawing.Point(6, 241);
+            this.msoAttDivine.Name = "msoAttDivine";
+            this.msoAttDivine.Size = new System.Drawing.Size(57, 46);
+            this.msoAttDivine.TabIndex = 3;
+            this.msoAttDivine.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttDivine.UseVisualStyleBackColor = true;
+            // 
+            // msoAttDark
+            // 
+            this.msoAttDark.Location = new System.Drawing.Point(6, 201);
+            this.msoAttDark.Name = "msoAttDark";
+            this.msoAttDark.Size = new System.Drawing.Size(57, 46);
+            this.msoAttDark.TabIndex = 2;
+            this.msoAttDark.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttDark.UseVisualStyleBackColor = true;
+            // 
+            // msoAttWater
+            // 
+            this.msoAttWater.Location = new System.Drawing.Point(6, 158);
+            this.msoAttWater.Name = "msoAttWater";
+            this.msoAttWater.Size = new System.Drawing.Size(57, 46);
+            this.msoAttWater.TabIndex = 1;
+            this.msoAttWater.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttWater.UseVisualStyleBackColor = true;
+            // 
+            // msoAttEarth
+            // 
+            this.msoAttEarth.Location = new System.Drawing.Point(6, 118);
+            this.msoAttEarth.Name = "msoAttEarth";
+            this.msoAttEarth.Size = new System.Drawing.Size(57, 46);
+            this.msoAttEarth.TabIndex = 0;
+            this.msoAttEarth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.msoAttEarth.UseVisualStyleBackColor = true;
+            // 
+            // msoAtkLess
+            // 
+            this.msoAtkLess.AutoSize = true;
+            this.msoAtkLess.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoAtkLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoAtkLess.Location = new System.Drawing.Point(180, 268);
+            this.msoAtkLess.Name = "msoAtkLess";
+            this.msoAtkLess.Size = new System.Drawing.Size(25, 42);
+            this.msoAtkLess.TabIndex = 14;
+            this.msoAtkLess.Text = "<";
+            this.msoAtkLess.UseVisualStyleBackColor = true;
+            // 
+            // msoAtkGreat
+            // 
+            this.msoAtkGreat.AutoSize = true;
+            this.msoAtkGreat.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoAtkGreat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoAtkGreat.Location = new System.Drawing.Point(250, 268);
+            this.msoAtkGreat.Name = "msoAtkGreat";
+            this.msoAtkGreat.Size = new System.Drawing.Size(25, 42);
+            this.msoAtkGreat.TabIndex = 16;
+            this.msoAtkGreat.Text = ">";
+            this.msoAtkGreat.UseVisualStyleBackColor = true;
+            // 
+            // msoAtkEqual
+            // 
+            this.msoAtkEqual.AutoSize = true;
+            this.msoAtkEqual.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoAtkEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoAtkEqual.Location = new System.Drawing.Point(215, 268);
+            this.msoAtkEqual.Name = "msoAtkEqual";
+            this.msoAtkEqual.Size = new System.Drawing.Size(25, 42);
+            this.msoAtkEqual.TabIndex = 15;
+            this.msoAtkEqual.Text = "=";
+            this.msoAtkEqual.UseVisualStyleBackColor = true;
+            // 
+            // msoLRLLess
+            // 
+            this.msoLRLLess.AutoSize = true;
+            this.msoLRLLess.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.msoLRLLess.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msoLRLLess.Location = new System.Drawing.Point(349, 117);
+            this.msoLRLLess.Name = "msoLRLLess";
+            this.msoLRLLess.Size = new System.Drawing.Size(25, 42);
+            this.msoLRLLess.TabIndex = 24;
+            this.msoLRLLess.Text = "<";
+            this.msoLRLLess.UseVisualStyleBackColor = true;
+            // 
             // soSpellTrap
             // 
             this.soSpellTrap.Controls.Add(this.stsoRadioIcon);
@@ -627,7 +716,6 @@
             // 
             this.stsoIconAny.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
             this.stsoIconAny.Checked = true;
-            this.stsoIconAny.Image = global::YuGiDough.Properties.Resources.anyicon;
             this.stsoIconAny.Location = new System.Drawing.Point(6, 66);
             this.stsoIconAny.Name = "stsoIconAny";
             this.stsoIconAny.Size = new System.Drawing.Size(57, 46);
@@ -639,7 +727,6 @@
             // stsoIconCounter
             // 
             this.stsoIconCounter.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconCounter.Image = global::YuGiDough.Properties.Resources.Counter;
             this.stsoIconCounter.Location = new System.Drawing.Point(195, 67);
             this.stsoIconCounter.Name = "stsoIconCounter";
             this.stsoIconCounter.Size = new System.Drawing.Size(57, 46);
@@ -650,7 +737,6 @@
             // stsoIconRitual
             // 
             this.stsoIconRitual.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconRitual.Image = global::YuGiDough.Properties.Resources.Ritual;
             this.stsoIconRitual.Location = new System.Drawing.Point(195, 17);
             this.stsoIconRitual.Name = "stsoIconRitual";
             this.stsoIconRitual.Size = new System.Drawing.Size(57, 46);
@@ -661,7 +747,6 @@
             // stsoIconField
             // 
             this.stsoIconField.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconField.Image = global::YuGiDough.Properties.Resources.Field;
             this.stsoIconField.Location = new System.Drawing.Point(132, 67);
             this.stsoIconField.Name = "stsoIconField";
             this.stsoIconField.Size = new System.Drawing.Size(57, 46);
@@ -672,7 +757,6 @@
             // stsoIconEquip
             // 
             this.stsoIconEquip.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconEquip.Image = global::YuGiDough.Properties.Resources.Equip;
             this.stsoIconEquip.Location = new System.Drawing.Point(132, 17);
             this.stsoIconEquip.Name = "stsoIconEquip";
             this.stsoIconEquip.Size = new System.Drawing.Size(57, 46);
@@ -683,7 +767,6 @@
             // stsoIconContinuous
             // 
             this.stsoIconContinuous.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconContinuous.Image = global::YuGiDough.Properties.Resources.Continuous;
             this.stsoIconContinuous.Location = new System.Drawing.Point(69, 67);
             this.stsoIconContinuous.Name = "stsoIconContinuous";
             this.stsoIconContinuous.Size = new System.Drawing.Size(57, 46);
@@ -694,7 +777,6 @@
             // stsoIconQuickPlay
             // 
             this.stsoIconQuickPlay.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconQuickPlay.Image = global::YuGiDough.Properties.Resources.Quick_Play;
             this.stsoIconQuickPlay.Location = new System.Drawing.Point(69, 17);
             this.stsoIconQuickPlay.Name = "stsoIconQuickPlay";
             this.stsoIconQuickPlay.Size = new System.Drawing.Size(57, 46);
@@ -705,7 +787,6 @@
             // stsoIconNormal
             // 
             this.stsoIconNormal.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.stsoIconNormal.Image = global::YuGiDough.Properties.Resources.Normal;
             this.stsoIconNormal.Location = new System.Drawing.Point(6, 17);
             this.stsoIconNormal.Name = "stsoIconNormal";
             this.stsoIconNormal.Size = new System.Drawing.Size(57, 46);
@@ -716,7 +797,6 @@
             // stsoTypeTrap
             // 
             this.stsoTypeTrap.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stsoTypeTrap.Image = global::YuGiDough.Properties.Resources.TRAP1;
             this.stsoTypeTrap.Location = new System.Drawing.Point(10, 111);
             this.stsoTypeTrap.Name = "stsoTypeTrap";
             this.stsoTypeTrap.Size = new System.Drawing.Size(57, 46);
@@ -727,7 +807,6 @@
             // stsoTypeSpell
             // 
             this.stsoTypeSpell.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.stsoTypeSpell.Image = global::YuGiDough.Properties.Resources.SPELL1;
             this.stsoTypeSpell.Location = new System.Drawing.Point(10, 65);
             this.stsoTypeSpell.Name = "stsoTypeSpell";
             this.stsoTypeSpell.Size = new System.Drawing.Size(57, 46);
@@ -739,7 +818,6 @@
             // 
             this.stsoTypeAny.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.stsoTypeAny.Checked = true;
-            this.stsoTypeAny.Image = global::YuGiDough.Properties.Resources.SPELTRAP1;
             this.stsoTypeAny.Location = new System.Drawing.Point(10, 19);
             this.stsoTypeAny.Name = "stsoTypeAny";
             this.stsoTypeAny.Size = new System.Drawing.Size(57, 46);
@@ -747,92 +825,6 @@
             this.stsoTypeAny.TabStop = true;
             this.stsoTypeAny.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.stsoTypeAny.UseVisualStyleBackColor = true;
-            // 
-            // msoAttAny
-            // 
-            this.msoAttAny.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.msoAttAny.Checked = true;
-            this.msoAttAny.Image = global::YuGiDough.Properties.Resources.anyattribute;
-            this.msoAttAny.Location = new System.Drawing.Point(64, 241);
-            this.msoAttAny.Name = "msoAttAny";
-            this.msoAttAny.Size = new System.Drawing.Size(57, 46);
-            this.msoAttAny.TabIndex = 7;
-            this.msoAttAny.TabStop = true;
-            this.msoAttAny.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttAny.UseVisualStyleBackColor = true;
-            // 
-            // msoAttLight
-            // 
-            this.msoAttLight.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.msoAttLight.Image = global::YuGiDough.Properties.Resources.LIGHT;
-            this.msoAttLight.Location = new System.Drawing.Point(64, 201);
-            this.msoAttLight.Name = "msoAttLight";
-            this.msoAttLight.Size = new System.Drawing.Size(57, 46);
-            this.msoAttLight.TabIndex = 6;
-            this.msoAttLight.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttLight.UseVisualStyleBackColor = true;
-            // 
-            // msoAttFire
-            // 
-            this.msoAttFire.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.msoAttFire.Image = global::YuGiDough.Properties.Resources.FIRE;
-            this.msoAttFire.Location = new System.Drawing.Point(64, 161);
-            this.msoAttFire.Name = "msoAttFire";
-            this.msoAttFire.Size = new System.Drawing.Size(57, 46);
-            this.msoAttFire.TabIndex = 5;
-            this.msoAttFire.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttFire.UseVisualStyleBackColor = true;
-            // 
-            // msoAttWind
-            // 
-            this.msoAttWind.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.msoAttWind.Image = global::YuGiDough.Properties.Resources.WIND;
-            this.msoAttWind.Location = new System.Drawing.Point(64, 118);
-            this.msoAttWind.Name = "msoAttWind";
-            this.msoAttWind.Size = new System.Drawing.Size(57, 46);
-            this.msoAttWind.TabIndex = 4;
-            this.msoAttWind.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttWind.UseVisualStyleBackColor = true;
-            // 
-            // msoAttDivine
-            // 
-            this.msoAttDivine.Image = global::YuGiDough.Properties.Resources.Divine_Beastie;
-            this.msoAttDivine.Location = new System.Drawing.Point(6, 241);
-            this.msoAttDivine.Name = "msoAttDivine";
-            this.msoAttDivine.Size = new System.Drawing.Size(57, 46);
-            this.msoAttDivine.TabIndex = 3;
-            this.msoAttDivine.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttDivine.UseVisualStyleBackColor = true;
-            // 
-            // msoAttDark
-            // 
-            this.msoAttDark.Image = global::YuGiDough.Properties.Resources.DARK;
-            this.msoAttDark.Location = new System.Drawing.Point(6, 201);
-            this.msoAttDark.Name = "msoAttDark";
-            this.msoAttDark.Size = new System.Drawing.Size(57, 46);
-            this.msoAttDark.TabIndex = 2;
-            this.msoAttDark.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttDark.UseVisualStyleBackColor = true;
-            // 
-            // msoAttWater
-            // 
-            this.msoAttWater.Image = global::YuGiDough.Properties.Resources.WATER;
-            this.msoAttWater.Location = new System.Drawing.Point(6, 158);
-            this.msoAttWater.Name = "msoAttWater";
-            this.msoAttWater.Size = new System.Drawing.Size(57, 46);
-            this.msoAttWater.TabIndex = 1;
-            this.msoAttWater.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttWater.UseVisualStyleBackColor = true;
-            // 
-            // msoAttEarth
-            // 
-            this.msoAttEarth.Image = global::YuGiDough.Properties.Resources.EARTH;
-            this.msoAttEarth.Location = new System.Drawing.Point(6, 118);
-            this.msoAttEarth.Name = "msoAttEarth";
-            this.msoAttEarth.Size = new System.Drawing.Size(57, 46);
-            this.msoAttEarth.TabIndex = 0;
-            this.msoAttEarth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.msoAttEarth.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -890,7 +882,6 @@
             this.soResultCount.Size = new System.Drawing.Size(50, 13);
             this.soResultCount.TabIndex = 23;
             this.soResultCount.Text = "x Results";
-            this.soResultCount.Click += new System.EventHandler(this.Label2_Click);
             // 
             // labelCardName
             // 
@@ -903,11 +894,126 @@
             this.labelCardName.TabIndex = 24;
             this.labelCardName.Text = "Card Name";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(1031, 124);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(181, 158);
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // deckBox
+            // 
+            this.deckBox.FormattingEnabled = true;
+            this.deckBox.Location = new System.Drawing.Point(508, 454);
+            this.deckBox.Name = "deckBox";
+            this.deckBox.Size = new System.Drawing.Size(238, 394);
+            this.deckBox.TabIndex = 26;
+            this.deckBox.SelectedIndexChanged += new System.EventHandler(this.DeckBox_SelectedIndexChanged);
+            // 
+            // textSave
+            // 
+            this.textSave.Location = new System.Drawing.Point(508, 431);
+            this.textSave.Name = "textSave";
+            this.textSave.Size = new System.Drawing.Size(161, 20);
+            this.textSave.TabIndex = 27;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(688, 431);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(58, 21);
+            this.buttonSave.TabIndex = 28;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.ButtonSave_Click);
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLoad.Location = new System.Drawing.Point(688, 404);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(58, 21);
+            this.buttonLoad.TabIndex = 29;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.ButtonLoad_Click);
+            // 
+            // textLoad
+            // 
+            this.textLoad.Location = new System.Drawing.Point(508, 405);
+            this.textLoad.Name = "textLoad";
+            this.textLoad.Size = new System.Drawing.Size(161, 20);
+            this.textLoad.TabIndex = 30;
+            // 
+            // buttonAddToDeck
+            // 
+            this.buttonAddToDeck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddToDeck.Location = new System.Drawing.Point(342, 551);
+            this.buttonAddToDeck.Name = "buttonAddToDeck";
+            this.buttonAddToDeck.Size = new System.Drawing.Size(70, 24);
+            this.buttonAddToDeck.TabIndex = 31;
+            this.buttonAddToDeck.Text = "->";
+            this.buttonAddToDeck.UseVisualStyleBackColor = true;
+            this.buttonAddToDeck.Click += new System.EventHandler(this.ButtonAddToDeck_Click);
+            // 
+            // buttonRemoveFromDeck
+            // 
+            this.buttonRemoveFromDeck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemoveFromDeck.Location = new System.Drawing.Point(434, 551);
+            this.buttonRemoveFromDeck.Name = "buttonRemoveFromDeck";
+            this.buttonRemoveFromDeck.Size = new System.Drawing.Size(70, 24);
+            this.buttonRemoveFromDeck.TabIndex = 32;
+            this.buttonRemoveFromDeck.Text = "<-";
+            this.buttonRemoveFromDeck.UseVisualStyleBackColor = true;
+            this.buttonRemoveFromDeck.Click += new System.EventHandler(this.ButtonRemoveFromDeck_Click);
+            // 
+            // allDecks
+            // 
+            this.allDecks.FormattingEnabled = true;
+            this.allDecks.Location = new System.Drawing.Point(340, 611);
+            this.allDecks.Name = "allDecks";
+            this.allDecks.Size = new System.Drawing.Size(162, 238);
+            this.allDecks.TabIndex = 33;
+            this.allDecks.SelectedIndexChanged += new System.EventHandler(this.AllDecks_SelectedIndexChanged);
+            // 
+            // buttonDeleteDeck
+            // 
+            this.buttonDeleteDeck.Location = new System.Drawing.Point(340, 581);
+            this.buttonDeleteDeck.Name = "buttonDeleteDeck";
+            this.buttonDeleteDeck.Size = new System.Drawing.Size(84, 24);
+            this.buttonDeleteDeck.TabIndex = 34;
+            this.buttonDeleteDeck.Text = "Delete Deck";
+            this.buttonDeleteDeck.UseVisualStyleBackColor = true;
+            this.buttonDeleteDeck.Click += new System.EventHandler(this.ButtonDeleteDeck_Click);
+            // 
+            // buttonClearDeck
+            // 
+            this.buttonClearDeck.Location = new System.Drawing.Point(428, 581);
+            this.buttonClearDeck.Name = "buttonClearDeck";
+            this.buttonClearDeck.Size = new System.Drawing.Size(74, 24);
+            this.buttonClearDeck.TabIndex = 35;
+            this.buttonClearDeck.Text = "Clear Deck";
+            this.buttonClearDeck.UseVisualStyleBackColor = true;
+            this.buttonClearDeck.Click += new System.EventHandler(this.ButtonClearDeck_Click);
+            // 
             // CardView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1778, 859);
+            this.Controls.Add(this.buttonClearDeck);
+            this.Controls.Add(this.buttonDeleteDeck);
+            this.Controls.Add(this.allDecks);
+            this.Controls.Add(this.buttonRemoveFromDeck);
+            this.Controls.Add(this.buttonAddToDeck);
+            this.Controls.Add(this.textLoad);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.textSave);
+            this.Controls.Add(this.deckBox);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.labelCardName);
             this.Controls.Add(this.soResultCount);
             this.Controls.Add(this.button2);
@@ -942,6 +1048,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1017,5 +1124,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label soResultCount;
         private System.Windows.Forms.Label labelCardName;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ListBox deckBox;
+        private System.Windows.Forms.TextBox textSave;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.TextBox textLoad;
+        private System.Windows.Forms.Button buttonAddToDeck;
+        private System.Windows.Forms.Button buttonRemoveFromDeck;
+        private System.Windows.Forms.ListBox allDecks;
+        private System.Windows.Forms.Button buttonDeleteDeck;
+        private System.Windows.Forms.Button buttonClearDeck;
     }
 }

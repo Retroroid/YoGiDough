@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,12 @@ namespace YuGiDough {
     public class Card {
         // ---------------- ---------------- Variables ---------------- ---------------- //
         public int dataBaseID;
-        public string name, cardText, MST;
+        public bool rotated, flipped;
+        public string name, cardText, MST, imgLink, cdlink;
         public List<string> cardType;
         public List<set> Sets;
         public monsterData monDat;
-        public static string basePath;
+        public static string basePath, datPath;
         public static string[] sTypes = { "Normal", "Continuous", "Counter", "Equip", "Field", "Quick-Play", "Ritual" };
         public static string[] attributes = { "Any", "Earth", "Wind", "Fire", "Water", "Dark", "Light", "Divine" };
         public static string[] monsterTypes = { "Any", "Aqua", "Beast", "Beast-Warrior", "Cyberse", "Dinosaur", "Divine-Beast", "Dragon", "Fairy", "Fiend",
@@ -29,7 +31,7 @@ namespace YuGiDough {
         }
         public struct monsterData {
             public string attribute, mType, pEffect;
-            public int atk, def, level, rank, link, scale;
+            public int atk, def, level, rank, link, scale, XyzMat;
             public void setNulls() { pEffect = string.Empty; attribute = string.Empty; mType = string.Empty; atk = 0; def = 0; level = 0; rank = 0; link = 0; scale = 0; }
         }
         // ---------------- ---------------- Constructors ---------------- ---------------- //
@@ -37,15 +39,17 @@ namespace YuGiDough {
             this.monDat.setNulls();
             Sets = new List<set>();
             cardType = new List<string>();
+
         }
         // ---------------- ---------------- Methods ---------------- ---------------- //
         public static Card loadFromFile(string cardPath) {
             // Create a string array from the file, and create the card for the data.
             string[] fileData = System.IO.File.ReadAllLines(cardPath);
             Card temp = new Card();
+            temp.cdlink = cardPath;
             // Add name and ID to card data.
             temp.dataBaseID = int.Parse(fileData[0]);
-            temp.name = fileData[1];
+            temp.name = fileData[1].Replace("&quot;","\"");
             // Find the location of the card text, and where it begins.
             int i = 2;
             while (!fileData[i].Contains("Card Text")) { i++; }
@@ -63,6 +67,48 @@ namespace YuGiDough {
                 temp.doMonster(fileData, i);
             }
             else throw new Exception("Error while parsing card type.");
+
+            // Find the card image!
+            Image temperr = null;
+            string cardname = temp.name;
+            cardname = cardname.Split('(')[0].TrimEnd(' ');
+            cardname = cardname.Replace("amp;", string.Empty);
+            cardname = cardname.Replace(":", "_");
+            cardname = cardname.Replace(" ", "_");
+            cardname = cardname.Replace("\\", "_");
+            cardname = cardname.Replace("&quot;", "_");
+            cardname = cardname.Replace("ãƒ»", "・");
+            cardname = cardname.Replace("&Uuml;", "Ü");
+            cardname = cardname.Replace("&uacute;", "ú");
+            cardname = cardname.Replace("?", "%3F");
+            cardname = cardname.Replace("/", "_");
+            cardname = cardname.Replace("&Omega;", "Ω");
+            cardname = cardname.Replace("&beta;", "β");
+            cardname = cardname.Replace("&alpha;", "β");
+            cardname = cardname.Replace("&ntilde;", "ñ");
+            cardname = cardname.Replace("\"", "_");
+            try {
+                temperr = Image.FromFile(basePath + "\\ydata\\" + cardname + ".jpg");
+            }
+            catch (Exception) {
+                try {
+                    cardname = cardname.Replace("-", "_");
+                    cardname = cardname.Replace("#", string.Empty);
+                    cardname = cardname.Replace("!", "_");
+                    temperr = Image.FromFile(basePath + "\\ydata\\" + cardname + ".jpg");
+                }
+                catch (Exception) {
+                    try {
+                        cardname = cardname.Replace(".", "_");
+                        cardname = cardname.Replace("\'", "%27");
+                        temperr = Image.FromFile(basePath + "\\ydata\\" + cardname + ".jpg");
+                    }
+                    catch (Exception) { }
+                }
+            }
+            temp.rotated = false;
+            temp.flipped = false;
+            temp.imgLink = basePath + "\\ydata\\" + cardname + ".jpg";
             // Return the card
             return temp;
         }

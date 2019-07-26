@@ -54,16 +54,38 @@
       <DependentUpon>CardView.cs</DependentUpon>
     </Compile>
     <Compile Include="Databaser.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Deck.cs" />
+    <Compile Include="deckSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="deckSearch.Designer.cs">
+      <DependentUpon>deckSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Field.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Field.Designer.cs">
+      <DependentUpon>Field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Menu.Designer.cs">
+      <DependentUpon>Main_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CardView.resx">
       <DependentUpon>CardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deckSearch.resx">
+      <DependentUpon>deckSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Field.resx">
+      <DependentUpon>Field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Menu.resx">
+      <DependentUpon>Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\visuals\anyicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\visuals\Coming Soon.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

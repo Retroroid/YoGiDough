@@ -15,9 +15,9 @@ namespace YuGiDough {
             Application.SetCompatibleTextRenderingDefault(false);
 
             string tempPath = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
-            Card.basePath = System.IO.Path.GetDirectoryName(tempPath).Substring(6).Replace("/","\\\\") + "\\\\ydata";
+            Card.basePath = System.IO.Path.GetDirectoryName(tempPath).Substring(6).Replace("/","\\\\");
 
-            Application.Run(new CardView());
+            Application.Run(new Main_Menu());
         }
     }
     public static class StringExtensions {

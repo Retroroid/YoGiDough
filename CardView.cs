@@ -1,87 +1,90 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace YuGiDough {
     public partial class CardView : Form {
         // ---------------- ---------------- Class Variables ---------------- ---------------- //
-        public string basePath = "C:\\Users\\lucask\\ygodough\\ydata\\";
+        public string basePath;
         public Card currentCard;
         public Image currentImage;
+        public string vimages, vcards;
         // ---------------- ---------------- Form Initialization ---------------- ---------------- //
         public CardView() {
             InitializeComponent();
+            this.basePath = Card.basePath;
+            vcards = basePath + "\\ydata\\";
             // Initialize card list
             listBox1.DisplayMember = "name";
-            DirectoryInfo DI = new DirectoryInfo(Card.basePath);
+            DirectoryInfo DI = new DirectoryInfo(vcards.TrimEnd('\\'));
             foreach (var file in DI.GetFiles("*.txt")) {
                 currentCard = Card.loadFromFile(file.FullName);
                 listBox1.Items.Add(currentCard);
             }
+            // Other ini stuff
+            labelLink.Hide();
+            labelLevel.Hide();
+            labelScale.Hide();
+            DirectoryInfo DZ = new DirectoryInfo(basePath + "\\Deck");
+            foreach(var file in DZ.GetFiles()) {
+                allDecks.Items.Add(file.Name);
+            }
+
             // Initialize monster search panel
             msoTypeBox.Items.AddRange(Card.monsterTypes);
             soResultCount.Text = listBox1.Items.Count + " Results";
             msoTypeBox.SelectedIndex = 0;
+            
+            //Images
+            vimages = (basePath + "\\visuals\\");
+            stsoTypeAny.Image = Image.FromFile(vimages + "SPELLTRAP.png");
+            stsoTypeSpell.Image = Image.FromFile(vimages + "SPELL.jpg");
+            stsoTypeTrap.Image = Image.FromFile(vimages + "TRAP.jpg");
+            stsoIconAny.Image = Image.FromFile(vimages + "anyicon.png");
+            stsoIconNormal.Image = Image.FromFile(vimages + "Normal.png");
+            stsoIconQuickPlay.Image = Image.FromFile(vimages + "Quick-Play.png");
+            stsoIconContinuous.Image = Image.FromFile(vimages + "Continuous.png");
+            stsoIconEquip.Image = Image.FromFile(vimages + "Equip.png");
+            stsoIconField.Image = Image.FromFile(vimages + "Field.png");
+            stsoIconRitual.Image = Image.FromFile(vimages + "Ritual.png");
+            stsoIconCounter.Image = Image.FromFile(vimages + "Counter.png");
+
+            msoAttAny.Image = Image.FromFile(vimages + "anyattribute.png");
+            msoAttEarth.Image = Image.FromFile(vimages + "EARTH.png");
+            msoAttWind.Image = Image.FromFile(vimages + "WIND.png");
+            msoAttWater.Image = Image.FromFile(vimages + "WATER.png");
+            msoAttFire.Image = Image.FromFile(vimages + "FIRE.png");
+            msoAttDark.Image = Image.FromFile(vimages + "DARK.png");
+            msoAttLight.Image = Image.FromFile(vimages + "LIGHT.png");
+            msoAttDivine.Image = Image.FromFile(vimages + "Divine-Beastie.png");
+
+            pictureBox4.Image = Image.FromFile(vimages + "Coming Soon.png");
+
         } // End constructor
         //
         // ---------------- ---------------- Picture / Card List Control ---------------- ---------------- //
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e) {
             currentCard = (Card)listBox1.SelectedItem;
-            labelCardName.Text = currentCard.name;
-            string cardname = currentCard.name;
-            cardname = cardname.Split('(')[0].TrimEnd(' ');
-            cardname = cardname.Replace("amp;", string.Empty);
-            cardname = cardname.Replace(":", "_");
-            cardname = cardname.Replace(" ", "_");
-            cardname = cardname.Replace("\\", "_");
-            cardname = cardname.Replace("&quot;", "_");
-            cardname = cardname.Replace("ãƒ»", "・");
-            cardname = cardname.Replace("&Uuml;", "Ü");
-            cardname = cardname.Replace("&uacute;", "ú");
-            cardname = cardname.Replace("?", "%3F");
-            cardname = cardname.Replace("/", "_");
-            cardname = cardname.Replace("&Omega;", "Ω");
-            cardname = cardname.Replace("&beta;", "β");
-            cardname = cardname.Replace("&alpha;", "β");
-            cardname = cardname.Replace("&ntilde;", "ñ");
             try {
-                currentImage = Image.FromFile(basePath + cardname + ".jpg");
+                labelCardName.Text = currentCard.name;
             }
             catch (Exception) {
-                try {
-                    cardname = cardname.Replace("-", "_");
-                    cardname = cardname.Replace("#", string.Empty);
-                    cardname = cardname.Replace("!", "_");
-                    currentImage = Image.FromFile(basePath + cardname + ".jpg");
-                }
-                catch (Exception) {
-                    try {
-                        cardname = cardname.Replace(".", "_");
-                        cardname = cardname.Replace("\'", "%27");
-                        currentImage = Image.FromFile(basePath + cardname + ".jpg");
-                    }
-                    catch (Exception) {
-                        string partialName = cardname;
-                        DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(basePath);
-                        FileInfo[] filesInDir = hdDirectoryInWhichToSearch.GetFiles("*" + partialName + "*.*");
-
-                        foreach (FileInfo foundFile in filesInDir) {
-                            System.IO.File.Move(foundFile.FullName, foundFile.FullName.Replace("ydata", "Problem Cards"));
-                        }
-                    }
-                }
+                listBox1.SelectedIndex = 0;
+                currentCard = (Card)listBox1.SelectedItem;
+                labelCardName.Text = currentCard.name;
             }
-            pictureBox1.Image = currentImage;
+            pictureBox1.Image = Image.FromFile(currentCard.imgLink);
             textBox1.Text = currentCard.cardText;
 
             switch (currentCard.MST) {
                 case "Monster":
                 textBox2.Text = currentCard.monDat.attribute;
                 //no plants
-                pictureBox2.Image = Image.FromFile("C:\\Users\\lucask\\ygodough\\visuals\\" + currentCard.monDat.mType + ".png");
+                pictureBox2.Image = Image.FromFile(vimages + currentCard.monDat.mType + ".png");
                 textBox3.Text = currentCard.monDat.mType;
-                pictureBox3.Image = Image.FromFile("C:\\Users\\lucask\\ygodough\\visuals\\" + currentCard.monDat.attribute + ".png");
+                pictureBox3.Image = Image.FromFile(vimages + currentCard.monDat.attribute + ".png");
                 break;
 
                 default:
@@ -89,9 +92,9 @@ namespace YuGiDough {
                 boxLevel.Hide(); labelLevel.Hide();
                 boxScale.Hide(); labelScale.Hide();
                 textBox2.Text = currentCard.MST.ToUpper();
-                pictureBox2.Image = Image.FromFile("C:\\Users\\lucask\\ygodough\\visuals\\" + currentCard.cardType[0] + ".png");
+                pictureBox2.Image = Image.FromFile(vimages + currentCard.cardType[0] + ".png");
                 textBox3.Text = currentCard.cardType[0];
-                pictureBox3.Image = Image.FromFile("C:\\Users\\lucask\\ygodough\\visuals\\" + currentCard.MST.ToUpper() + ".png");
+                pictureBox3.Image = Image.FromFile(vimages + currentCard.MST.ToUpper() + ".png");
                 break;
             } // End switch
             if (currentCard.monDat.pEffect != null) {
@@ -129,7 +132,7 @@ namespace YuGiDough {
         private void Button1_Click_1(object sender, EventArgs e) {
             // Clear the current list, create a new DI, and create space for a bool variable.
             listBox1.Items.Clear();
-            DirectoryInfo DI = new DirectoryInfo(basePath.TrimEnd('\\'));
+            DirectoryInfo DI = new DirectoryInfo(vcards.TrimEnd('\\'));
             bool addToList;
 
             // Check each card in the file directory. Begin by setting the flag to true; it is easier to prove something is false than true.
@@ -210,8 +213,7 @@ namespace YuGiDough {
                     }
 
                     // Atk/Def check
-                    if (!currentCard.MST.Equals("Monster")) addToList = false;
-                    else if (!msoBoxAtk.Text.Equals(string.Empty)) {
+                    if (!msoBoxAtk.Text.Equals(string.Empty)) {
                         if (msoAtkLess.Checked != true && currentCard.monDat.atk < int.Parse(msoBoxAtk.Text)) addToList = false;
                         if (msoAtkEqual.Checked != true && currentCard.monDat.atk == int.Parse(msoBoxAtk.Text)) addToList = false;
                         if (msoAtkGreat.Checked != true && currentCard.monDat.atk > int.Parse(msoBoxAtk.Text)) addToList = false;
@@ -246,14 +248,6 @@ namespace YuGiDough {
             soResultCount.Text = listBox1.Items.Count + " Results";
         } // End of Search Button
           // ---------------- //
-        private void Panel1_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void SoMonster_Enter(object sender, EventArgs e) {
-
-        }
-
         private void Button2_Click(object sender, EventArgs e) {
             soCardType.SelectedIndex = 0;
 
@@ -305,12 +299,121 @@ namespace YuGiDough {
             }
         }
 
-        private void Label2_Click(object sender, EventArgs e) {
+        private void DeckBox_SelectedIndexChanged(object sender, EventArgs e) {
+            currentCard = (Card)deckBox.SelectedItem;
+            try {
+                labelCardName.Text = currentCard.name;
+            }
+            catch (Exception) {
+                listBox1.SelectedIndex = 0;
+                currentCard = (Card)listBox1.SelectedItem;
+                labelCardName.Text = currentCard.name;
+            }
+            pictureBox1.Image = Image.FromFile(currentCard.imgLink);
+            textBox1.Text = currentCard.cardText;
 
+            switch (currentCard.MST) {
+                case "Monster":
+                textBox2.Text = currentCard.monDat.attribute;
+                //no plants
+                pictureBox2.Image = Image.FromFile(vimages + currentCard.monDat.mType + ".png");
+                textBox3.Text = currentCard.monDat.mType;
+                pictureBox3.Image = Image.FromFile(vimages + currentCard.monDat.attribute + ".png");
+                break;
+
+                default:
+                boxLink.Hide(); labelLink.Hide();
+                boxLevel.Hide(); labelLevel.Hide();
+                boxScale.Hide(); labelScale.Hide();
+                textBox2.Text = currentCard.MST.ToUpper();
+                pictureBox2.Image = Image.FromFile(vimages + currentCard.cardType[0] + ".png");
+                textBox3.Text = currentCard.cardType[0];
+                pictureBox3.Image = Image.FromFile(vimages + currentCard.MST.ToUpper() + ".png");
+                break;
+            } // End switch
+            if (currentCard.monDat.pEffect != null) {
+                textBox4.Text = currentCard.monDat.pEffect;
+            }
+            string typeString = "";
+            foreach (string s in currentCard.cardType) {
+                if (typeString.Equals("")) typeString = s;
+                else typeString = typeString + " / " + s;
+            }
+            textBox5.Text = typeString;
+
+            if (currentCard.monDat.link == 0) { labelLink.Hide(); boxLink.Hide(); }
+            else {
+                boxLink.Text = currentCard.monDat.link.ToString();
+                labelLink.Show();
+                boxLink.Show();
+            }
+            if (currentCard.monDat.scale == 0) { textBox4.Hide(); labelScale.Hide(); boxScale.Hide(); }
+            else {
+                boxScale.Text = currentCard.monDat.scale.ToString();
+                boxScale.Show();
+                labelScale.Show();
+                textBox4.Show();
+            }
+            if (currentCard.monDat.level == 0) { boxLevel.Hide(); labelLevel.Hide(); }
+            else {
+                boxLevel.Text = currentCard.monDat.level.ToString();
+                boxLevel.Show();
+                labelLevel.Show();
+            }
+        } // End Card View select
+
+        private void ButtonRemoveFromDeck_Click(object sender, EventArgs e) {
+            try {
+                int i = deckBox.SelectedIndex;
+                deckBox.Items.RemoveAt(deckBox.SelectedIndex);
+                if(i != 0) deckBox.SelectedIndex = i-1;
+            }
+            catch (Exception) { }
         }
-        // ---------------- ---------------- ---------------- Search Options ---------------- ---------------- ---------------- //
 
+        private void ButtonLoad_Click(object sender, EventArgs e) {
+            // save to (basepath + \\Deck\\ + deckName.txt
+            deckBox.Items.Clear();
+            string[] deckList = File.ReadAllLines(basePath + "\\Deck\\" + textLoad.Text.Replace(".txt",string.Empty) + ".txt");
+            foreach (string st in deckList) {
+                if (!st.Equals(string.Empty)) {
+                    st.Trim('\n');
+                    Card temp = Card.loadFromFile(st);
+                    deckBox.Items.Add(temp);
+                }
+            }
+        }
 
+        private void ButtonSave_Click(object sender, EventArgs e) {
+            Deck newDeck = new Deck();
+            foreach(Card cd in deckBox.Items) {
+                newDeck.addCard(cd);
+            }
+            newDeck.deckName = textSave.Text;
+            // --------------- //
+            if(File.Exists(basePath + "\\Deck\\" + newDeck.deckName + ".txt")) {
+
+            }
+            string deckLink = basePath + "\\Deck\\" + newDeck.deckName + ".txt";
+            File.WriteAllLines(deckLink, newDeck.printCardList());
+            allDecks.Items.Add(newDeck.deckName + ".txt");
+            allDecks.Refresh();
+        }
+
+        private void AllDecks_SelectedIndexChanged(object sender, EventArgs e) {
+            try {
+                textLoad.Text = allDecks.SelectedItem.ToString();
+            }
+            catch (Exception) { }
+        }
+
+        private void ButtonDeleteDeck_Click(object sender, EventArgs e) {
+            if (allDecks.SelectedIndex >= 0) File.Delete(basePath + "\\Deck\\" + allDecks.Items[allDecks.SelectedIndex]);
+        }
+
+        private void ButtonClearDeck_Click(object sender, EventArgs e) { deckBox.Items.Clear(); }
+
+        private void ButtonAddToDeck_Click(object sender, EventArgs e) { deckBox.Items.Add(currentCard); }
         // ---------------- ---------------- ---------------- ---------------- ---------------- ---------------- //
     } // End of Class
 } // End of Namespace
